@@ -1,0 +1,62 @@
+{
+  "source": "https://www.kaggle.com/datasets/shivamb/real-or-fake-fake-jobposting-prediction",
+  "csv_sha256": "59253295129d8b6a27607f9904f7d4ddf4dbb0ee35e079c7eb51b58b5e62bf60",
+  "raw_rows": 17880,
+  "unique_usable_rows": 15872,
+  "conflicting_texts_removed": 0,
+  "train_rows": 12697,
+  "test_rows": 3175,
+  "train_class_counts": {
+    "0": 12127,
+    "1": 570
+  },
+  "test_class_counts": {
+    "0": 3032,
+    "1": 143
+  },
+  "random_state": 42,
+  "decision_threshold": 0.5,
+  "confusion_matrix_rows_actual_columns_predicted_0_1": [
+    [
+      2693,
+      339
+    ],
+    [
+      28,
+      115
+    ]
+  ],
+  "classification_report": {
+    "legitimate": {
+      "precision": 0.9897096655641309,
+      "recall": 0.8881926121372031,
+      "f1-score": 0.9362071962454371,
+      "support": 3032.0
+    },
+    "fraudulent": {
+      "precision": 0.2533039647577093,
+      "recall": 0.8041958041958042,
+      "f1-score": 0.3852596314907873,
+      "support": 143.0
+    },
+    "accuracy": 0.8844094488188976,
+    "macro avg": {
+      "precision": 0.6215068151609201,
+      "recall": 0.8461942081665037,
+      "f1-score": 0.6607334138681122,
+      "support": 3175.0
+    },
+    "weighted avg": {
+      "precision": 0.9565424166774164,
+      "recall": 0.8844094488188976,
+      "f1-score": 0.9113928649824719,
+      "support": 3175.0
+    }
+  },
+  "limitations": [
+    "English historical job postings are a proxy for internship offers.",
+    "Near duplicates may remain after exact deduplication.",
+    "Equal class priors; fraud scores are not calibrated probabilities.",
+    "Single held-out split, no hyperparameter search; not a production evaluation."
+  ]
+}
