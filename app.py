@@ -25,6 +25,211 @@ st.set_page_config(
     layout="centered"
 )
 
+
+# --------------------------------------------------
+# VISUAL STYLING ONLY
+# --------------------------------------------------
+
+st.markdown(
+    """
+    <style>
+    /* Page background and content width */
+    .stApp {
+        background:
+            radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.10), transparent 34%),
+            #0b1120;
+        color: #e5e7eb;
+    }
+
+    [data-testid="stHeader"] {
+        background: rgba(11, 17, 32, 0.88);
+    }
+
+    .block-container {
+        max-width: 860px;
+        padding-top: 3rem;
+        padding-bottom: 4rem;
+    }
+
+    /* Main title and supporting text */
+    h1 {
+        color: #f8fafc !important;
+        font-size: 2.45rem !important;
+        font-weight: 750 !important;
+        letter-spacing: -0.045em;
+        margin-bottom: 0.35rem !important;
+    }
+
+    h2, h3 {
+        color: #eaf1ff !important;
+        letter-spacing: -0.02em;
+    }
+
+    h2 {
+        font-size: 1.35rem !important;
+        margin-top: 1.8rem !important;
+    }
+
+    h3 {
+        font-size: 1.08rem !important;
+        margin-top: 1.35rem !important;
+    }
+
+    p, label, .stCaption {
+        color: #cbd5e1;
+    }
+
+    [data-testid="stCaptionContainer"] p {
+        color: #94a3b8 !important;
+        font-size: 0.84rem;
+    }
+
+    /* Safety notice */
+    [data-testid="stAlert"] {
+        border: 1px solid rgba(96, 165, 250, 0.28);
+        border-radius: 12px;
+        background: rgba(30, 58, 95, 0.38);
+        color: #dbeafe;
+    }
+
+    [data-testid="stAlert"] p {
+        color: #dbeafe !important;
+    }
+
+    /* PDF uploader */
+    [data-testid="stFileUploader"] {
+        padding: 0.85rem 1rem;
+        border: 1px dashed #475569;
+        border-radius: 12px;
+        background: rgba(15, 23, 42, 0.72);
+    }
+
+    [data-testid="stFileUploader"] section {
+        background: transparent;
+    }
+
+    /* The offer form */
+    [data-testid="stForm"] {
+        padding: 1.35rem 1.4rem 1.15rem;
+        border: 1px solid #334155;
+        border-radius: 16px;
+        background: linear-gradient(
+            145deg,
+            rgba(20, 30, 49, 0.96),
+            rgba(15, 23, 42, 0.96)
+        );
+        box-shadow: 0 14px 36px rgba(0, 0, 0, 0.20);
+    }
+
+    /* Input labels */
+    [data-testid="stWidgetLabel"] p,
+    [data-testid="stWidgetLabel"] label {
+        color: #dbe5f4 !important;
+        font-size: 0.9rem;
+        font-weight: 550;
+    }
+
+    /* Text inputs, dropdowns and offer text area */
+    div[data-baseweb="input"] > div,
+    div[data-baseweb="select"] > div,
+    [data-testid="stTextArea"] textarea {
+        background: #111c2e !important;
+        border: 1px solid #3b4b63 !important;
+        border-radius: 9px !important;
+        color: #f1f5f9 !important;
+        transition: border-color 150ms ease, box-shadow 150ms ease;
+    }
+
+    div[data-baseweb="input"] > div:focus-within,
+    div[data-baseweb="select"] > div:focus-within,
+    [data-testid="stTextArea"] textarea:focus {
+        border-color: #60a5fa !important;
+        box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.15) !important;
+    }
+
+    [data-testid="stTextArea"] textarea {
+        min-height: 190px;
+        line-height: 1.55;
+    }
+
+    input, textarea {
+        color: #f1f5f9 !important;
+    }
+
+    /* Primary action */
+    [data-testid="stFormSubmitButton"] button,
+    [data-testid="stDownloadButton"] button {
+        min-height: 2.7rem;
+        border: 1px solid #3b82f6 !important;
+        border-radius: 9px !important;
+        background: #2563eb !important;
+        color: #ffffff !important;
+        font-weight: 650 !important;
+        transition: background 150ms ease, transform 150ms ease;
+    }
+
+    [data-testid="stFormSubmitButton"] button:hover,
+    [data-testid="stDownloadButton"] button:hover {
+        background: #1d4ed8 !important;
+        border-color: #60a5fa !important;
+        transform: translateY(-1px);
+    }
+
+    /* Secondary buttons */
+    .stButton button {
+        border-radius: 9px;
+    }
+
+    /* Results and information panels */
+    [data-testid="stMetric"] {
+        padding: 1rem;
+        border: 1px solid #334155;
+        border-radius: 12px;
+        background: rgba(17, 28, 46, 0.82);
+    }
+
+    [data-testid="stMetricLabel"] {
+        color: #94a3b8 !important;
+    }
+
+    [data-testid="stMetricValue"] {
+        color: #f8fafc !important;
+    }
+
+    [data-testid="stExpander"] {
+        border: 1px solid #334155;
+        border-radius: 11px;
+        background: rgba(15, 23, 42, 0.62);
+    }
+
+    hr {
+        border-color: #334155;
+    }
+
+    /* Responsive layout */
+    @media (max-width: 640px) {
+        .block-container {
+            padding: 1.5rem 1rem 3rem;
+        }
+
+        h1 {
+            font-size: 2rem !important;
+        }
+
+        [data-testid="stForm"] {
+            padding: 1rem;
+        }
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+
+# --------------------------------------------------
+# APPLICATION HEADER
+# --------------------------------------------------
+
 st.title("🛡️ InternShield")
 
 st.write(
