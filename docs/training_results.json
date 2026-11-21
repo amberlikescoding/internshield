@@ -1,0 +1,92 @@
+{
+  "dataset": "Indian internship postings and offers (English/Hinglish) \u2014 hand-written synthetic",
+  "dataset_sha256": "b6f955819148260b8679910c6e6538e8299ee5cee0e6a3de9cf2c60a63c775f4",
+  "script_sha256": "8d3687736361162d385236bda3e27282fcd87a6ae616747f0f230a840685d592",
+  "seed": 42,
+  "split_counts": {
+    "train": {
+      "total": 105,
+      "legitimate": 52,
+      "fraudulent": 53
+    },
+    "validation": {
+      "total": 36,
+      "legitimate": 18,
+      "fraudulent": 18
+    },
+    "test": {
+      "total": 36,
+      "legitimate": 18,
+      "fraudulent": 18
+    }
+  },
+  "calibrated": false,
+  "threshold": 0.6197890987509777,
+  "policy": {
+    "minimum_validation_recall": 0.7,
+    "selection": "Highest validation precision, ties prefer recall then higher cutoff."
+  },
+  "validation_results": {
+    "threshold": 0.6197890987509777,
+    "precision": 1.0,
+    "recall": 0.8888888888888888,
+    "f1": 0.9411764705882353,
+    "confusion_matrix": [
+      [
+        18,
+        0
+      ],
+      [
+        2,
+        16
+      ]
+    ],
+    "false_alarms": 0,
+    "missed_fraud": 2
+  },
+  "test_results": {
+    "threshold": 0.6197890987509777,
+    "precision": 0.9444444444444444,
+    "recall": 0.9444444444444444,
+    "f1": 0.9444444444444444,
+    "confusion_matrix": [
+      [
+        17,
+        1
+      ],
+      [
+        1,
+        17
+      ]
+    ],
+    "false_alarms": 1,
+    "missed_fraud": 1
+  },
+  "holdout_results": {
+    "threshold": 0.6197890987509777,
+    "precision": 0.9047619047619048,
+    "recall": 0.95,
+    "f1": 0.926829268292683,
+    "confusion_matrix": [
+      [
+        18,
+        2
+      ],
+      [
+        1,
+        19
+      ]
+    ],
+    "false_alarms": 2,
+    "missed_fraud": 1,
+    "rows": 40,
+    "removed_overlap_with_training": 0,
+    "file_sha256": "e6bb7038ec107fdf17bc1fa40854ba54674fcf406b0253340524f9cc33958b11"
+  },
+  "limitations": [
+    "Small synthetic dataset written by hand, not a verified real-message benchmark.",
+    "A random internal split can share writing styles/templates; exact duplicates are removed, near duplicates may remain.",
+    "The holdout file is separate and was never used for training or choosing the cutoff, but it is small and written by the same team/assistant.",
+    "Model is uncalibrated and not validated for full offer letters or real-world scam detection."
+  ]
+}

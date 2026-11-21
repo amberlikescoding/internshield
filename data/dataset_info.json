@@ -1,0 +1,29 @@
+{
+  "name": "Indian recruitment messages \u2014 synthetic pilot",
+  "source": "https://huggingface.co/datasets/Ridham115/indian-scam-sms-synthetic-audited",
+  "raw_sha256": "45bde5f156a1a42698bab209e32bcd41b3639013d772f644cc3208ed39fb61e2",
+  "prepared_sha256": "4011e75a1c295857965d12cfdaf843f153f60eabc31601710ea6653d9d56dc2b",
+  "source_rows": 1580,
+  "topic": "job_offer",
+  "languages": [
+    "en",
+    "hinglish"
+  ],
+  "excluded_source_ids": {
+    "826f635812fa": "Document request: insufficient text-only evidence for the scam label.",
+    "134dbb8d1d60": "OTP/login wording on an official-looking URL: ambiguous without external evidence.",
+    "7dc004693e4b": "OTP/login wording: ambiguous without external evidence.",
+    "83967ac187fc": "Verification-link reminder: insufficient evidence for the scam label.",
+    "f066103e5d99": "Account-block/payment threat, not a clear recruitment message.",
+    "a71d09fe8795": "Standalone identity-verification link, not a clear recruitment message.",
+    "60343c2f86d9": "Existing-employee tax notice, not a recruitment message."
+  },
+  "rows": 119,
+  "class_counts": {
+    "1": 63,
+    "0": 56
+  },
+  "synthetic": true,
+  "review": "Assistant content review; not independent human or real-world verification.",
+  "attribution": "Ridham115, Indian Scam SMS (synthetic, audited), CC BY 4.0; see source card for provider terms."
+}
